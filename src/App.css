@@ -34,3 +34,24 @@
   font-weight: bold;
   
 }
+.btnh{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  margin: 20px;
+}
+.btn{
+  width: 80px;
+  height: 30px;
+  background-color: rgb(38, 52, 204);
+  font-size: 17px;
+  color: white;
+  border: none
+}
+
+.btn:hover{
+  background-color: rgb(11, 11, 92);
+  transition: all;
+  transition-duration: 0.7s;
+}

@@ -249,10 +249,11 @@ function App() {
           <label htmlFor='push'>Push notifications</label>
 
         </fieldset>
-
-        <button >
+        <div className='btnh'>
+        <button className='btn'>
               Save
         </button>
+        </div>
       </form>
     </div>
   );
