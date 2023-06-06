@@ -108,7 +108,7 @@ function App() {
 
       <br></br>
 
-      <label htmlFor='cityName'>Street address</label>
+      <label htmlFor='cityName'>City</label>
       <br></br>
       <input
       type='text'
@@ -123,7 +123,7 @@ function App() {
 
       <br></br>
 
-      <label htmlFor='stateName'>Street address</label>
+      <label htmlFor='stateName'>State/Province</label>
       <br></br>
       <input
       type='text'
