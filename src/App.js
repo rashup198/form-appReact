@@ -152,7 +152,7 @@ function App() {
 
     
       <fieldset>
-        <legend>By email</legend>
+        <legend className='deep'>By email</legend>
 
         <div className='ras flex'>
 
@@ -204,7 +204,7 @@ function App() {
        
 
         <fieldset>
-          <legend>Push Notifications</legend>
+          <legend className='deep'>Push Notifications</legend>
           <p>These are delivered via SMS to your mobile phone.</p>
 
           <input 
