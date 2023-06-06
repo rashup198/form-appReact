@@ -1,3 +1,4 @@
+import './index.css';
 
 import './App.css';
 import {useState} from 'react';
@@ -27,19 +28,20 @@ function App() {
   
 
   return (
-    <div className="App">
+    <div className="flex flex-col items-center mt-2">
       
 
       <form onSubmit={submitHandler}>
         <label htmlFor='fName'>First Name</label>
         <br></br>
-        <input
+        <input 
         type="text"
         placeholder="Priyanshu"
         onChange={changeHandler}
         id='fname'
         name='firstName'
-        value={formData.firstName}>
+        value={formData.firstName}
+        className="outline">
         </input>
 
         <br></br>
@@ -53,7 +55,8 @@ function App() {
         name='LastName'
         onChange={changeHandler}
         id='Lname'
-        value={formData.LastName}>
+        value={formData.LastName}
+        className="outline">
         </input>
 
 
@@ -68,7 +71,8 @@ function App() {
       name='email'
       onChange={changeHandler}
       id='emailId'
-      value={formData.email}>
+      value={formData.email}
+      className="outline">
       </input>
 
 
@@ -78,6 +82,7 @@ function App() {
       <label htmlFor='country'>Country</label>
       <br></br>
       <select name='country'
+      className="outline"
       id='country'
       onChange={changeHandler}
       value={formData.country}>
@@ -97,6 +102,7 @@ function App() {
       name='street'
       onChange={changeHandler}
       value={formData.street}
+      className="outline"
       id='streetName'>
       </input>
 
@@ -110,6 +116,7 @@ function App() {
       name='city'
       onChange={changeHandler}
       value={formData.city}
+      className="outline"
       id='cityName'>
       </input>
 
@@ -124,6 +131,7 @@ function App() {
       name='state'
       onChange={changeHandler}
       value={formData.state}
+      className="outline"
       id='stateName'>
       </input>
       <br></br>
@@ -138,14 +146,16 @@ function App() {
       name='pincode'
       onChange={changeHandler}
       value={formData.pincode}
+      className="outline"
       id='pinC'>
       </input>
 
-
+    
       <fieldset>
         <legend>By email</legend>
 
-        
+        <div className='flex'>
+
         <input type='checkbox'
         onChange={changeHandler}
         name='comment'
@@ -154,22 +164,28 @@ function App() {
         checked={formData.comment}>
 
         </input>
-        
+        <div>
         <label htmlFor="comment">Comments</label>
         <p>Get notified when someones posts a comment on a posting.</p>
+        </div>
+        </div>
 
+
+        <div className='flex'>
         <input type='checkbox'
         onChange={changeHandler}
         name='candidate'
         checked={formData.candidate}
         id='candidate'
         >
-
         </input>
-
+        <div>
         <label htmlFor='candidate'>Candidates</label>
         <p>Get notified when a candidate applies for a job</p>
+        </div>
+        </div>
 
+        <div className='flex flex-row'>
         <input type='checkbox'
         onChange={changeHandler}
         name='offer'
@@ -178,10 +194,14 @@ function App() {
         checked={formData.offer}>
 
         </input>
-
+        <div>
         <label htmlFor='offers'>Offers</label>
         <p>Get notified when a candidate accepts or rejects an offer.</p>
+        </div>
+        </div>
        </fieldset>
+
+       
 
         <fieldset>
           <legend>Push Notifications</legend>
