@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import {useState} from 'react';
 
@@ -18,7 +18,8 @@ function App() {
     })
 
   }
-  function submitHandler(){
+  function submitHandler(event){
+    event.preventDefault();
     console.log("Printing all the data Collected from user");
     console.log(formData);
   }
@@ -229,7 +230,7 @@ function App() {
 
         </fieldset>
 
-        <button onClick={submitHandler}>
+        <button >
               Save
         </button>
       </form>
