@@ -4,7 +4,7 @@ import {useState} from 'react';
 
 function App() {
   const [formData, setFormData] = useState(
-    {firstName:"" , LastName:"", email:"" , country:"", street:"", city:"", state:"", pincode:"", }
+    {firstName:"" , LastName:"", email:"" , country:"", street:"", city:"", state:"", pincode:"",comment:true, candidate:true, offer:true }
   );
 
   function changeHandler(event){
@@ -136,6 +136,47 @@ function App() {
       id='pinC'>
       </input>
 
+
+      <fieldset>
+        <legend>By email</legend>
+
+        
+        <input type='checkbox'
+        onChange={changeHandler}
+        name='comment'
+       
+        id='comment'
+        checked={formData.comment}>
+
+        </input>
+        
+        <label htmlFor="comment">Comments</label>
+        <p>Get notified when someones posts a comment on a posting.</p>
+
+        <input type='checkbox'
+        onChange={changeHandler}
+        name='candidate'
+        checked={formData.candidate}
+        id='candidate'
+        >
+
+        </input>
+
+        <label htmlFor='candidate'>Candidates</label>
+        <p>Get notified when a candidate applies for a job</p>
+
+        <input type='checkbox'
+        onChange={changeHandler}
+        name='offer'
+        value="offers"
+        id='offer'
+        checked={formData.offer}>
+
+        </input>
+
+        <label htmlFor='offers'>Offers</label>
+        <p>Get notified when a candidate accepts or rejects an offer.</p>
+       </fieldset>
 
 
       </form>
