@@ -4,7 +4,7 @@ import {useState} from 'react';
 
 function App() {
   const [formData, setFormData] = useState(
-    {firstName:"" , LastName:"", email:"" , country:"", street:"", city:"", state:"", pincode:"",comment:true, candidate:true, offer:true }
+    {firstName:"" , LastName:"", email:"" , country:"", street:"", city:"", state:"", pincode:"",comment:true, candidate:true, offer:true, notification_everytime:"", }
   );
 
   function changeHandler(event){
@@ -18,14 +18,18 @@ function App() {
     })
 
   }
+  function submitHandler(){
+    console.log("Printing all the data Collected from user");
+    console.log(formData);
+  }
 
-  console.log(formData);
+  
 
   return (
     <div className="App">
       
 
-      <form>
+      <form onSubmit={submitHandler}>
         <label htmlFor='fName'>First Name</label>
         <br></br>
         <input
@@ -178,7 +182,56 @@ function App() {
         <p>Get notified when a candidate accepts or rejects an offer.</p>
        </fieldset>
 
+        <fieldset>
+          <legend>Push Notifications</legend>
+          <p>These are delivered via SMS to your mobile phone.</p>
 
+          <input 
+          type='radio'
+          name="notification_everytime"
+          onChange={changeHandler}
+          value="Everytime"
+          id='noti_eve'
+          checked={formData.notification_everytime==="Everytime"}
+          >
+          </input>
+
+          <label htmlFor='Everytime'>Everytime</label>
+
+          <br></br>
+
+          <input 
+          type='radio'
+          onChange={changeHandler}
+          name="notification_everytime"
+          value="same_as_mail"
+          id='sameas'
+          checked={formData.notification_everytime==="same_as_mail"}
+          >
+          </input>
+
+          <label htmlFor='sameas'>Same as mail</label>
+
+
+          <br></br>
+
+          <input 
+          type='radio'
+          onChange={changeHandler}
+          name="notification_everytime"
+          value="push-notification"
+          id='push'
+          checked={formData.notification_everytime==="push-notification"}
+          >
+          </input>
+
+          <label htmlFor='push'>Push notifications</label>
+
+        </fieldset>
+
+        <button onClick={submitHandler}>
+              Save
+        </button>
       </form>
     </div>
   );
