@@ -1,4 +1,30 @@
 .App {
-  text-align: center;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  background-color: rgb(232, 218, 246);
+  
 }
 
+.pan{
+  margin-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  font-weight: bold;
+}
+
+
+.ras{
+  display: flex;
+}
+
+.outline{
+  width: 550px;
+  height: 25px;
+  border-radius: 5px;
+  border: 2px solid black;
+  margin: 10px;
+
+}

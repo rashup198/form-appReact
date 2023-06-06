@@ -28,11 +28,11 @@ function App() {
   
 
   return (
-    <div className="flex flex-col items-center mt-2">
+    <div className="App flex flex-col items-center mt-2 ">
       
 
       <form onSubmit={submitHandler}>
-        <label htmlFor='fName'>First Name</label>
+        <label className='pan' htmlFor='fName'>First Name</label>
         <br></br>
         <input 
         type="text"
@@ -47,7 +47,7 @@ function App() {
         <br></br>
 
 
-        <label htmlFor='LName'>Last Name</label>
+        <label className='pan'  htmlFor='LName'>Last Name</label>
         <br></br>
         <input
         type="text"
@@ -63,7 +63,7 @@ function App() {
         <br></br>
 
 
-      <label htmlFor='emailId'>Email address</label>
+      <label className='pan'  htmlFor='emailId'>Email address</label>
       <br></br>
       <input
       type="email"
@@ -79,7 +79,7 @@ function App() {
       <br>
       </br>
 
-      <label htmlFor='country'>Country</label>
+      <label className='pan'  htmlFor='country'>Country</label>
       <br></br>
       <select name='country'
       className="outline"
@@ -94,7 +94,7 @@ function App() {
 
       <br></br>
 
-      <label htmlFor='streetName'>Street address</label>
+      <label className='pan'  htmlFor='streetName'>Street address</label>
       <br></br>
       <input
       type='text'
@@ -108,7 +108,7 @@ function App() {
 
       <br></br>
 
-      <label htmlFor='cityName'>City</label>
+      <label className='pan'  htmlFor='cityName'>City</label>
       <br></br>
       <input
       type='text'
@@ -123,7 +123,7 @@ function App() {
 
       <br></br>
 
-      <label htmlFor='stateName'>State/Province</label>
+      <label className='pan'  htmlFor='stateName'>State/Province</label>
       <br></br>
       <input
       type='text'
@@ -136,7 +136,7 @@ function App() {
       </input>
       <br></br>
 
-      <label htmlFor='pinC'>Postal Code/ZIP</label>
+      <label className='pan'  htmlFor='pinC'>Postal Code/ZIP</label>
 
       <br></br>
 
@@ -154,7 +154,7 @@ function App() {
       <fieldset>
         <legend>By email</legend>
 
-        <div className='flex'>
+        <div className='ras flex'>
 
         <input type='checkbox'
         onChange={changeHandler}
@@ -171,7 +171,7 @@ function App() {
         </div>
 
 
-        <div className='flex'>
+        <div className='ras flex'>
         <input type='checkbox'
         onChange={changeHandler}
         name='candidate'
@@ -185,7 +185,7 @@ function App() {
         </div>
         </div>
 
-        <div className='flex flex-row'>
+        <div className='ras flex '>
         <input type='checkbox'
         onChange={changeHandler}
         name='offer'
